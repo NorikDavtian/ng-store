@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    #admin {
+        padding-left: 0;
+    }
+    #admin #sidebar-wrapper {
+        width: 0;
+    }
+    #page-content-wrapper {
+        padding: 5px 20px;
+        position: relative;
+        margin-right: 0;
+    }
+}

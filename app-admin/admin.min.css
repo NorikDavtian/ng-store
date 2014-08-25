@@ -1,0 +1,306 @@
+/*  admin.min.css
+    Description: Custom admin styles for the app
+    Author     : Norik Davtian <norik@bigemployee.com>
+*/
+/**
+ * 1 - Basic Structure
+ * -----------------------------------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  overflow-y: scroll;
+  /* prevents layout from shifting when searching datat */
+}
+
+#admin {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#admin.toggled {
+  padding-left: 200px;
+}
+
+#sidebar-wrapper {
+  z-index: 99;
+  position: fixed;
+  left: 200px;
+  width: 0;
+  height: 100%;
+  margin-left: -200px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#admin.toggled #sidebar-wrapper {
+  width: 200px;
+}
+
+#page-content-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  padding: 45px 0 15px;
+  z-index: 120;
+}
+
+#menu-toggle {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  margin-left: -8px;
+  z-index: 90;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#admin.toggled #menu-toggle {
+  margin-left: -26px;
+}
+
+#admin .search {
+  margin-top: 20px;
+}
+
+/**
+ * 2 - Sidebar
+ * -----------------------------------------------------------------------------
+ */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav span {
+  display: inline;
+  margin-right: 10px;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+/**
+ * 3 - Dashboard
+ * -----------------------------------------------------------------------------
+ */
+.widget {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #e9e9e9;
+}
+
+.widget-icon {
+  background: #00C28E;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.widget-icon.blue {
+  background: #30426A;
+}
+
+.widget-icon.orange {
+  background: #DBA000;
+}
+
+.widget-icon.red {
+  background: #C00;
+}
+
+.widget-icon i {
+  line-height: 66px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.widget h3 {
+  margin: 7px 0;
+}
+
+/**
+ * 4 - Data Tables
+ * -----------------------------------------------------------------------------
+ */
+.table-responsive {
+  margin-top: 20px;
+}
+
+.table .form-control {
+  border: 0 none;
+  box-shadow: none;
+  min-width: 60px;
+}
+
+.table .form-control:focus {
+  outline: auto;
+}
+
+.thumbnail {
+  background-color: #f4f4f4;
+  padding: 0;
+  max-width: 48px;
+  max-height: 48px;
+  /*border-radius: 50%;*/
+  margin: 0;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+a.glyphicon-plus,
+a.glyphicon-trash {
+  position: relative;
+  color: #ccc;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.glyphicon-trash:focus,
+.glyphicon-trash:hover {
+  background: #c00;
+  color: #fff;
+  text-decoration: none;
+}
+
+.glyphicon-plus:active,
+.glyphicon-trash:active {
+  margin-top: 1px;
+}
+
+a.glyphicon-plus {
+  background: #3bb896;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.glyphicon-plus:focus,
+.glyphicon-plus:hover {
+  text-decoration: none;
+  background: #0c9;
+}
+
+.table-hover > tbody > tr:first-child {
+  border-bottom: 2px solid #ddd;
+  background: #f1f1f1;
+}
+
+.table-normal > tbody > tr:first-child {
+  border-bottom: inherit;
+  background: inherit;
+}
+
+.table .narrow {
+  max-width: 55px;
+}
+
+/**
+ * 5 - Misc
+ * -----------------------------------------------------------------------------
+ */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/**
+ * 7 - Media Queries
+ * -----------------------------------------------------------------------------
+ */
+/* Desktop */
+@media (min-width: 768px) {
+  #admin {
+    padding-left: 0;
+  }
+
+  #admin #sidebar-wrapper {
+    width: 0;
+  }
+
+  #page-content-wrapper {
+    padding: 5px 20px;
+    position: relative;
+    margin-right: 0;
+  }
+}

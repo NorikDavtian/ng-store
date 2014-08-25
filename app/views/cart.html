@@ -1,0 +1,40 @@
+<div id="cart" class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">My Cart <small ng-show="itemsCount">{{itemsCount}} item{{itemsCount > 1 && 's'|| ''}}</small></h1>
+        <p class="cart-empty well-cart" ng-hide="itemsCount"></p>
+    </div>
+    <div ng-show="itemsCount">
+        <div class="col-lg-9 simple-cart-body">
+            <table class="table">
+                <tbody>
+                    <tr class="simple-cart-item" ng-repeat="item in items">
+                        <td>
+                            <a href="#/products/{{item.sku}}">
+                                <img ng-src="{{item.image}}">
+                            </a>
+                        </td>
+                        <td class="details">
+                            <h3>{{item.title}} <span class="price">{{item.price| currency}}</span></h3>
+                            <div class="input-group quantity">
+                                <span class="input-group-addon" ng-click="add(item, -1);">-</span>
+                                <input type="text" class="form-control" value="{{item.quantity}}">
+                                <span class="input-group-addon" ng-click="add(item, 1)">+</span>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="remove" href="" ng-click="remove(item)" rel="nofollow">&times;</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-3 subtotal">
+            <h4>Subtotal</h4>
+            <strong>{{subTotal| currency}}</strong>
+        </div>
+        <div class="simple-cart-footer col-lg-12">
+            <a class="btn btn-lg btn-default col-lg-3 col-md-4 col-sm-6 col-xs-12 pull-left" href="" ng-click="emptyCart()">Empty Cart</a>
+            <a class="btn btn-lg btn-primary col-lg-3 col-md-4 col-sm-6 col-xs-12 pull-right" href="#/checkout">Checkout</a>
+        </div>
+    </div>
+</div>

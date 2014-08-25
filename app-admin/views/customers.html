@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <h1>Customers</h1>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pull-right search">
+        <div class="input-group">
+            <input class="form-control" placeholder="Search Customers" type="text" autocomplete="off" ng-model="query">
+            <div class="input-group-btn">
+                <button class="btn btn-default" data-ember-action="1"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-hover table-normal">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Apt/Unit</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>Joined</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="customer in customers| orderBy:predicate:reverse | filter:query">
+                        <td>
+                            <a href="#/customers/{{customer.$id}}">{{customer.$id}}</a>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Full Name" ng-model="customer.name" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Email" ng-model="customer.email" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Address" ng-model="customer.address" ng-change="save(customer)">
+                        </td>
+                        <td class="narrow">
+                            <input type="text" class="form-control" placeholder="Unit" ng-model="customer.unit" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="City" ng-model="customer.city" ng-change="save(customer)">
+                        </td>
+                        <td class="narrow">
+                            <input type="text" class="form-control" placeholder="State" ng-model="customer.state" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Zip" ng-model="customer.zip" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            {{customer.customerSince|  date:'mediumDate'}}
+                        </td>
+                        <td class="narrow">
+                            <a href="" class="glyphicon glyphicon-trash" ng-click="remove(customer)"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

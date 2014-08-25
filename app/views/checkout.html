@@ -1,0 +1,138 @@
+<div id="checkout" class="row">
+    <p class="cart-empty well-cart" ng-hide="itemsCount"></p>
+    <form ng-show="itemsCount" name="orderFrom" ng-submit="placeOrder()" novalidate>
+        <div id="customer-info" class="col-lg-7">
+            <h2>Shipping Address</h2>
+            <p>Click for some <a href="" ng-click="prefillInvalid()" class="btn btn-default btn-sm"><strong class="text-danger">invalid</strong></a> and <a href="" ng-click="prefillValid()" class="btn btn-default btn-sm"><strong class="text-success">valid</strong></a> data to prefill this form.</p>
+            <p class="alert alert-danger" ng-show="error">{{::error}}</p>
+            <div class="form-group col-sm-12">
+                <label for="fullname">Full Name</label> 
+                <input id="fullname" type="text" class="form-control" ng-model="customer.name" required>
+            </div>
+
+            <div class="form-group col-sm-12">
+                <label for="email">Email</label>
+                <input id="email" type="email" class="form-control" ng-model="customer.email" required>
+            </div>
+
+            <div class="form-group col-sm-8">
+                <label for="address">Street address</label>
+                <input id="address" type="text" class="form-control" ng-model="customer.address" required>
+            </div>
+
+            <div class="form-group col-sm-4">
+                <label for="apt">Apt / Unit</label>
+                <input id="apt" type="text" class="form-control" ng-model="customer.unit">
+            </div>
+
+            <div class="form-group col-sm-8">
+                <label for="city">City</label>
+                <input id="city" type="text" class="form-control" ng-model="customer.city" required>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="state">State</label>
+                <input id="state" type="text" class="form-control" ng-model="customer.state" uppercase required>
+            </div>
+
+            <div class="form-group col-sm-2">
+                <label for="zip">Zip</label>
+                <input id="zip" type="text" class="form-control" ng-model="customer.zip" required>
+            </div>
+            <hr>
+            <h2>Payment</h2>
+            <div class="form-group col-sm-6">
+                <label for="cc-name">Name</label> 
+                <input id="cc-name" type="text" class="form-control" ng-model="customer.payment.name">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="cc-last">Last Name</label> 
+                <input id="cc-last" type="text" class="form-control" ng-model="customer.payment.last">
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="cc-no">Card Number</label>
+                <input id="cc-no" type="text" class="form-control" ng-model="customer.payment.ccNo">
+            </div>
+
+            <div class="form-group col-sm-4">
+                <label for="cc-exp-month">Exp. Month</label>
+                <select id="cc-exp-month" class="form-control" ng-model="customer.payment.ccExpMonth">
+                    <option value="1">1 - Jan</option>
+                    <option value="2">2 - Feb</option>
+                    <option value="3">3 - Mar</option>
+                    <option value="4">4 - Apr</option>
+                    <option value="5">5 - May</option>
+                    <option value="6">6 - Jun</option>
+                    <option value="7">7 - Jul</option>
+                    <option value="8">8 - Aug</option>
+                    <option value="9">9 - Sept</option>
+                    <option value="10">10 - Oct</option>
+                    <option value="11">11 - Nov</option>
+                    <option value="12">12 - Dec</option>
+                </select>
+            </div>
+
+            <div class="form-group col-sm-4">
+                <label for="cc-exp-year">Exp. Year</label>
+                <select id="cc-exp-year" class="form-control" ng-model="customer.payment.ccExpYear">
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+
+            <div class="form-group col-sm-4">
+                <label for="cc-ccv">CCV Code</label>
+                <input id="cc-ccv" type="text" class="form-control" ng-model="customer.payment.ccCCV">
+            </div>                
+        </div>
+        <div id="checkout-cart" class="col-lg-5 well-cart">
+            <div id="checkout-cart-header">
+                <h4 class="pull-left">{{itemsCount}} item{{itemsCount > 1 && 's'|| ''}}, {{subTotal| currency}}</h4>
+                <a class="pull-right" href="#/cart">View/Edit Cart</a>
+            </div>
+            <div class="checkout-item" ng-repeat="item in items">
+                <img ng-src="{{item.image}}">
+                <h4>{{item.title}} <span class="price">{{item.price| currency}}</span></h4>
+                <p>qty: <span>{{item.quantity}}</span></p>
+            </div>
+            <ol id="checkout-totals">
+                <li>
+                    <strong>Subtotal</strong>
+                    <span>
+                        {{subTotal| currency}}
+                    </span>
+                </li>
+                <li>
+                    <strong>Tax <small>(10%)</small></strong>
+                    <span>
+                        {{tax|currency}}
+                    </span>
+                </li>
+                <li>
+                    <strong>Shipping</strong>
+                    <span>
+                        {{!shipping ? 'FREE' : (shipping| currency)}}
+                    </span>
+                </li>
+                <li id="grand-total">
+                    <strong>Grand Total</strong>
+                    <span>
+                        {{grandTotal| currency}}
+                    </span>
+                </li>
+            </ol>
+        </div>
+        <div id="checkout-footer" class="col-lg-12">
+            <input type="submit" class="btn btn-lg btn-primary col-lg-6 col-md-9 col-sm-12" value="Place Order">
+        </div>
+    </form>
+</div>

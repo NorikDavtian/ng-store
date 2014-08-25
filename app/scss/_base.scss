@@ -1,0 +1,29 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    overflow-y: scroll; /* prevents layout from shifting when searching datat */
+    background: #fff;
+    margin: 0 auto;
+    padding-top: 55px;
+}
+body,
+button,
+input,
+select,
+textarea{
+    color: #333;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: $line-height;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.page-header{
+    /* overwrite Bootstrap */
+    margin-top: 20px;
+}

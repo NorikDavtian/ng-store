@@ -1,0 +1,16 @@
+<div id="product" class="row">
+    <div class="col-md-6">
+        <figure class="featured-image">
+            <img ng-src="{{product.image}}" alt="{{product.title}}" />
+            <span class="sale"  ng-show="product.isOnSale == 'Yes'">Sale</span>
+        </figure>
+    </div>
+    <div class="col-md-6 text-center">
+        <h1>{{product.title}}</h1>
+        <strong class="price">{{product.price| currency}}</strong>
+        <hr>
+        <p class="text-left">{{product.description}}</p>
+        <hr>
+        <a href="" class="btn btn-primary btn-lg" ng-click="add(product, 1)">Add to Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    </div>
+</div>

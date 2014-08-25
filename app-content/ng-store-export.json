@@ -1,0 +1,481 @@
+{
+  "categories" : {
+    "berries" : {
+      "slug" : "berries",
+      "title" : "Berries"
+    },
+    "cake-pops" : {
+      "slug" : "cake-pops",
+      "title" : "Cake Pops"
+    }
+  },
+  "customers" : {
+    "-JVEJ8bTtGaKr0g2U9ko" : {
+      "address" : "20 Main Street",
+      "city" : "Los Angeles",
+      "customerSince" : 1409006213657,
+      "email" : "norik16@bigemployee.com",
+      "name" : "Norik Davtian 30",
+      "payment" : {
+        "ccCCV" : "260",
+        "ccExpMonth" : "9",
+        "ccExpYear" : "2016",
+        "ccNo" : "4228664255150",
+        "last" : "Davtian",
+        "name" : "Norik"
+      },
+      "state" : "CA",
+      "unit" : "3",
+      "zip" : "90715"
+    },
+    "-JVEJCtqkc2Hb-XoOMII" : {
+      "address" : "107 Main Street",
+      "city" : "Los Angeles",
+      "customerSince" : 1409006231218,
+      "email" : "norik89@bigemployee.com",
+      "name" : "Norik Davtian 87",
+      "payment" : {
+        "ccCCV" : "466",
+        "ccExpMonth" : "9",
+        "ccExpYear" : "2016",
+        "ccNo" : "42692694241890",
+        "last" : "Davtian",
+        "name" : "Norik"
+      },
+      "state" : "CA",
+      "unit" : "10",
+      "zip" : "90754"
+    },
+    "-JVEJJC0X9f5-iz3YA-B" : {
+      "address" : "102 Main Street",
+      "city" : "Los Angeles",
+      "customerSince" : 1409006257023,
+      "email" : "norik97@bigemployee.com",
+      "name" : "Norik Davtian 89",
+      "payment" : {
+        "ccCCV" : "440",
+        "ccExpMonth" : "9",
+        "ccExpYear" : "2016",
+        "ccNo" : "42189274235411",
+        "last" : "Davtian",
+        "name" : "Norik"
+      },
+      "state" : "CA",
+      "unit" : "6",
+      "zip" : "90366"
+    },
+    "-JVEJMjz75jox3EEy8_R" : {
+      "address" : "7 Main Street",
+      "city" : "Los Angeles",
+      "customerSince" : 1409006271548,
+      "email" : "norik59@bigemployee.com",
+      "name" : "Norik Davtian 45",
+      "payment" : {
+        "ccCCV" : "820",
+        "ccExpMonth" : "9",
+        "ccExpYear" : "2016",
+        "ccNo" : "4296454220769",
+        "last" : "Davtian",
+        "name" : "Norik"
+      },
+      "state" : "CA",
+      "unit" : "4",
+      "zip" : "90147"
+    },
+    "-JVEJRBqcjbBd5UIiviw" : {
+      "address" : "61 Main Street",
+      "city" : "Los Angeles",
+      "customerSince" : 1409006289775,
+      "email" : "norik56@bigemployee.com",
+      "name" : "Norik Davtian 75",
+      "payment" : {
+        "ccCCV" : "987",
+        "ccExpMonth" : "9",
+        "ccExpYear" : "2016",
+        "ccNo" : "42705704227571",
+        "last" : "Davtian",
+        "name" : "Norik"
+      },
+      "state" : "CA",
+      "unit" : "3",
+      "zip" : "90826"
+    }
+  },
+  "orders" : {
+    "-JVEJ8chLCMu3MvMuDB6" : {
+      "customer" : "-JVEJ8bTtGaKr0g2U9ko",
+      "grandTotal" : 11,
+      "items" : [ {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-1.jpg",
+        "price" : 10,
+        "quantity" : 1,
+        "sku" : 1,
+        "title" : "Half Dozen Hand-Dipped Summer Strawberries"
+      } ],
+      "orderDate" : 1409006213734,
+      "shipping" : 0,
+      "status" : "New",
+      "subTotal" : 10,
+      "tax" : 1
+    },
+    "-JVEJCv7R8_XrIG9adUC" : {
+      "customer" : "-JVEJCtqkc2Hb-XoOMII",
+      "grandTotal" : 95.12,
+      "items" : [ {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-2.jpg",
+        "price" : 10.99,
+        "quantity" : 1,
+        "sku" : 2,
+        "title" : "Half Dozen Gourmet Dipped Premium Strawberries"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-27.jpg",
+        "price" : 14.5,
+        "quantity" : 2,
+        "sku" : 27,
+        "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-22.jpg",
+        "price" : 16.49,
+        "quantity" : 1,
+        "sku" : 22,
+        "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-30.jpg",
+        "price" : 30,
+        "quantity" : 1,
+        "sku" : 30,
+        "title" : "Test"
+      } ],
+      "orderDate" : 1409006231302,
+      "shipping" : 0,
+      "status" : "Delivered",
+      "subTotal" : 86.48,
+      "tax" : 8.64
+    },
+    "-JVEJJDHCwuNU2nw2m5U" : {
+      "customer" : "-JVEJJC0X9f5-iz3YA-B",
+      "grandTotal" : 121.16,
+      "items" : [ {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-5.jpg",
+        "price" : 8,
+        "quantity" : 2,
+        "sku" : 5,
+        "title" : "Half Dozen Milk & Dark Strawberries"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-13.jpg",
+        "price" : 12.45,
+        "quantity" : 2,
+        "sku" : 13,
+        "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+      }, {
+        "image" : "data:image/gif;base64,R0lGODdhIAMgA8IAAADCjv///x/JnL/v4j/Rqn/gxp/o1N/38CwAAAAAIAMgAwAD/gi63P4wykmrvTjrzbv/YCiOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otHrNbrvf8Lh8Tq/b7/i8fs/v+/+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wADChxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzI/rGjx48gQ4ocSbKkyZMoU6pcybKly5cwY8qcSbOmzZs4c+rcybOnz59AgwodSrSo0aNIkypdyrSp06dQo0qdSrWq1atYs2rdyrWr169gw4odS7as2bNo06pdy7at27dw48qdS7eu3bt48+rdy7ev37+AAwseTLiw4cOIEytezLix48eQI0ueTLmy5cuYM2vezLmz58+gQ4seTbq06dOoU6tezbq169ewY8ueTbu27du4c+vezbu379/AgwsfTry48ePIkytfzry58+fQo0ufTr269evYs2vfzr279+/gw4sfT768+fPo06tfz769+/fw48ufT7++/fv48+vfz7+//v//AAYo4IAEFmjggQgmqOCCDDbo4IMQRijhhBRWaOGFGGao4YYcdujhhyCGKOKIJJZo4okopqjiiiy26OKLMMYo44w01mjjjTjmqOOOPPbo449ABinkkEQWaeSRSCap5JJMNunkk1BGKeWUVFZp5ZVYZqnlllx26eWXYIYp5phklmnmmWimqeaabLbp5ptwxinnnHTWaeedeOap55589unnn4AGKuighBZq6KGIJqrooow26uijkEYq6aSUVmrppZhmqummnHbq6aeghirqqKSWauqpqKaq6qqsturqq7DGKuustNZq66245qrrrrz26uuvwAYr7LB7ElCAAQMc/hBAAAcMYEABAhDbBQEGKLvstdgue4AB0UprhQAGZCvuuNx6O0UB46Y7bgFYCjCAuvDGK++8yw7QLQfu0qvvvvLa60K+/IprwJXvBmzwwQEM4EHBCDdM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",
+        "price" : 18,
+        "quantity" : 2,
+        "sku" : 20,
+        "title" : "Test"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-6.jpg",
+        "price" : 4.25,
+        "quantity" : 1,
+        "sku" : 6,
+        "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-27.jpg",
+        "price" : 14.5,
+        "quantity" : 2,
+        "sku" : 27,
+        "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+      } ],
+      "orderDate" : 1409006257105,
+      "shipping" : 0,
+      "status" : "Delivered",
+      "subTotal" : 110.15,
+      "tax" : 11.01
+    },
+    "-JVEJMl0v8dWZBmLL2bv" : {
+      "customer" : "-JVEJMjz75jox3EEy8_R",
+      "grandTotal" : 165,
+      "items" : [ {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-30.jpg",
+        "price" : 30,
+        "quantity" : 5,
+        "sku" : 30,
+        "title" : "Test"
+      } ],
+      "orderDate" : 1409006271615,
+      "shipping" : 0,
+      "status" : "Cencelled",
+      "subTotal" : 150,
+      "tax" : 15
+    },
+    "-JVEJRCn87V9yZIBvhXH" : {
+      "customer" : "-JVEJRBqcjbBd5UIiviw",
+      "grandTotal" : 166.06,
+      "items" : [ {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-1.jpg",
+        "price" : 10,
+        "quantity" : 4,
+        "sku" : 1,
+        "title" : "Half Dozen Hand-Dipped Summer Strawberries"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-29.jpg",
+        "price" : 27,
+        "quantity" : 3,
+        "sku" : 29,
+        "title" : "Best Strawberry mix"
+      }, {
+        "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-24.jpg",
+        "price" : 9.99,
+        "quantity" : 3,
+        "sku" : 24,
+        "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+      } ],
+      "orderDate" : 1409006289849,
+      "shipping" : 0,
+      "status" : "Shipped",
+      "subTotal" : 150.97,
+      "tax" : 15.09
+    }
+  },
+  "products" : [ null, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-1.jpg",
+    "isOnSale" : "No",
+    "price" : 10,
+    "sku" : 1,
+    "title" : "Half Dozen Hand-Dipped Summer Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-2.jpg",
+    "isOnSale" : "No",
+    "price" : 10.99,
+    "sku" : 2,
+    "title" : "Half Dozen Gourmet Dipped Premium Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-3.jpg",
+    "isOnSale" : "Yes",
+    "price" : 44.95,
+    "sku" : 3,
+    "title" : "Full Dozen Hand-Dipped Home Run Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-4.jpg",
+    "isOnSale" : "No",
+    "price" : 34.95,
+    "sku" : 4,
+    "title" : "Vanilla Cake Pops"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-5.jpg",
+    "isOnSale" : "No",
+    "price" : 8,
+    "sku" : 5,
+    "title" : "Half Dozen Milk & Dark Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-6.jpg",
+    "isOnSale" : "No",
+    "price" : 4.25,
+    "sku" : 6,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-7.jpg",
+    "isOnSale" : "No",
+    "price" : 6.75,
+    "sku" : 7,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-8.jpg",
+    "isOnSale" : "No",
+    "price" : 19.99,
+    "sku" : 8,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-9.jpg",
+    "isOnSale" : "Yes",
+    "price" : 12,
+    "sku" : 9,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-10.jpg",
+    "isOnSale" : "Yes",
+    "price" : 8.5,
+    "sku" : 10,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-11.jpg",
+    "isOnSale" : "Yes",
+    "price" : 11,
+    "sku" : 11,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-12.jpg",
+    "isOnSale" : "Yes",
+    "price" : 16.49,
+    "sku" : 12,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-13.jpg",
+    "isOnSale" : "Yes",
+    "price" : 12.45,
+    "sku" : 13,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-14.jpg",
+    "isOnSale" : "Yes",
+    "price" : 9.99,
+    "sku" : 14,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-15.jpg",
+    "isOnSale" : "Yes",
+    "price" : 8.75,
+    "sku" : 15,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-16.jpg",
+    "isOnSale" : "Yes",
+    "price" : 9.95,
+    "sku" : 16,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-17.jpg",
+    "isOnSale" : "Yes",
+    "price" : 14.5,
+    "sku" : 17,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-18.jpg",
+    "isOnSale" : "Yes",
+    "price" : 19.55,
+    "sku" : 18,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Berries",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-19.jpg",
+    "isOnSale" : "Yes",
+    "price" : 27,
+    "sku" : 19,
+    "title" : "Best Strawberry mix"
+  }, {
+    "category" : "Berries",
+    "description" : "This is a placeholder",
+    "image" : "data:image/gif;base64,R0lGODdhIAMgA8IAAADCjv///x/JnL/v4j/Rqn/gxp/o1N/38CwAAAAAIAMgAwAD/gi63P4wykmrvTjrzbv/YCiOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otHrNbrvf8Lh8Tq/b7/i8fs/v+/+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wADChxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzI/rGjx48gQ4ocSbKkyZMoU6pcybKly5cwY8qcSbOmzZs4c+rcybOnz59AgwodSrSo0aNIkypdyrSp06dQo0qdSrWq1atYs2rdyrWr169gw4odS7as2bNo06pdy7at27dw48qdS7eu3bt48+rdy7ev37+AAwseTLiw4cOIEytezLix48eQI0ueTLmy5cuYM2vezLmz58+gQ4seTbq06dOoU6tezbq169ewY8ueTbu27du4c+vezbu379/AgwsfTry48ePIkytfzry58+fQo0ufTr269evYs2vfzr279+/gw4sfT768+fPo06tfz769+/fw48ufT7++/fv48+vfz7+//v//AAYo4IAEFmjggQgmqOCCDDbo4IMQRijhhBRWaOGFGGao4YYcdujhhyCGKOKIJJZo4okopqjiiiy26OKLMMYo44w01mjjjTjmqOOOPPbo449ABinkkEQWaeSRSCap5JJMNunkk1BGKeWUVFZp5ZVYZqnlllx26eWXYIYp5phklmnmmWimqeaabLbp5ptwxinnnHTWaeedeOap55589unnn4AGKuighBZq6KGIJqrooow26uijkEYq6aSUVmrppZhmqummnHbq6aeghirqqKSWauqpqKaq6qqsturqq7DGKuustNZq66245qrrrrz26uuvwAYr7LB7ElCAAQMc/hBAAAcMYEABAhDbBQEGKLvstdgue4AB0UprhQAGZCvuuNx6O0UB46Y7bgFYCjCAuvDGK++8yw7QLQfu0qvvvvLa60K+/IprwJXvBmzwwQEM4EHBCDdM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",
+    "isOnSale" : "No",
+    "price" : 18,
+    "sku" : 20,
+    "title" : "Test"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-21.jpg",
+    "isOnSale" : "No",
+    "price" : 11,
+    "sku" : 21,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-22.jpg",
+    "isOnSale" : "Yes",
+    "price" : 16.49,
+    "sku" : 22,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-23.jpg",
+    "isOnSale" : "No",
+    "price" : 12.45,
+    "sku" : 23,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-24.jpg",
+    "isOnSale" : "Yes",
+    "price" : 9.99,
+    "sku" : 24,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-25.jpg",
+    "isOnSale" : "Yes",
+    "price" : 8.75,
+    "sku" : 25,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-26.jpg",
+    "isOnSale" : "Yes",
+    "price" : 9.95,
+    "sku" : 26,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-27.jpg",
+    "isOnSale" : "Yes",
+    "price" : 14.5,
+    "sku" : 27,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-28.jpg",
+    "isOnSale" : "Yes",
+    "price" : 19.55,
+    "sku" : 28,
+    "title" : "Half Dozen Gourmet Dipped Fancy Strawberries"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-29.jpg",
+    "isOnSale" : "No",
+    "price" : 27,
+    "sku" : 29,
+    "title" : "Best Strawberry mix"
+  }, {
+    "category" : "Cake Pops",
+    "description" : "This is a placeholder",
+    "image" : "https://ng-store.firebaseapp.com/app-content/img/sku-30.jpg",
+    "isOnSale" : "No",
+    "price" : 30,
+    "sku" : 30,
+    "title" : "Test"
+  } ]
+}

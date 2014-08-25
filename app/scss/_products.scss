@@ -1,0 +1,89 @@
+#products{
+    a{
+        position: relative;
+        float: left;
+        width: 100%;
+        max-width: 320px;
+        min-height: 265px;
+        text-decoration: none;
+        color: #fff;
+        overflow: hidden;
+        border: 1px solid #f4f4f4;
+        img{
+            width: 100%;
+            height: auto;
+            @include transition(all 0.5s ease-out);
+            @include transform(translateZ(0) scale(1.1));
+            -webkit-backface-visibility: hidden;
+        }
+        &:hover{
+            border: 1px solid #333;
+            img{
+                @include scale(1.0);
+            }
+        }
+    }
+    .price{
+        float: right;
+        i{
+            font-style: normal;
+            font-size: 0.9em;
+            font-weight: 400;
+        }
+    }
+}
+.product-title-wrapper{
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 20px 10px 10px;
+    @include background-image(linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)));
+}
+.product-title{
+    display: block;
+    padding-top: 2px;
+    font-style: normal;
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+.sale{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: -26px;
+    top: 15px;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    background: #ce2028;
+    color: #fff;
+    font-size: 0.666em;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    @include rotate(45deg);
+}
+.product{
+    margin-bottom: 30px;
+}
+/*
+  We're using CSS transitions for when
+  the enter and move events are triggered
+  for the element that has the .product class
+*/
+.product.ng-enter, 
+.product.ng-move {
+    @include transition(all 0.5s ease-out);
+    opacity:0;
+}
+/*
+ The ng-enter-active and ng-move-active
+ are where the transition destination properties
+ are set so that the animation knows what to animate.
+*/
+.product.ng-enter.ng-enter-active,
+.product.ng-move.ng-move-active {
+    opacity:1;
+}

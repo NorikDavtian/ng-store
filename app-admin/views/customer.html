@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Customer <small>{{customer.$id}}</small></h1>
+    </div>
+</div>
+<div class="row well well-lg">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-hover table-normal">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Apt/Unit</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>Joined</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Full Name" ng-model="customer.name" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Email" ng-model="customer.email" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Address" ng-model="customer.address" ng-change="save(customer)">
+                        </td>
+                        <td class="narrow">
+                            <input type="text" class="form-control" placeholder="Unit" ng-model="customer.unit" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="City" ng-model="customer.city" ng-change="save(customer)">
+                        </td>
+                        <td class="narrow">
+                            <input type="text" class="form-control" placeholder="State" ng-model="customer.state" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Zip" ng-model="customer.zip" ng-change="save(customer)">
+                        </td>
+                        <td>
+                            {{customer.customerSince|  date:'mediumDate'}}
+                        </td>
+                        <td class="narrow">
+                            <a href="" class="glyphicon glyphicon-trash" ng-click="remove(customer)"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<h2>Orders</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-hover table-normal">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>
+                            <a href="" ng-click="predicate = 'orderDate';
+                                        reverse = !reverse">Order Date</a>
+                        </th>
+                        <th>
+                            <a href="" ng-click="predicate = 'grandTotal';
+                                        reverse = !reverse">Total</a>
+                        </th>
+                        <th>Items</th>
+                        <th>
+                            <a href="" ng-click="predicate = 'status';
+                                        reverse = !reverse">Status</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="order in orders| orderBy:predicate:reverse | filter:customer.$id">
+                        <td>
+                            <a href="#/orders/{{order.$id}}">{{order.$id}}</a>
+                        </td>
+                        <td>
+                            {{order.orderDate|  date:'medium'}}
+                        </td>
+                        <td>
+                            {{order.grandTotal|currency}}
+                        </td>
+                        <td>
+                            <a href="#/orders/{{order.$id}}">View Details</a>
+                        </td>
+                        <td>{{order.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+{{foo}}
+        </div>
+    </div>
+</div>

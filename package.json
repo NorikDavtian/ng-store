@@ -1,0 +1,14 @@
+{
+  "name": "ng-store",
+  "description": "Angular Simple Store",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
+    "time-grunt": "*",
+    "grunt-contrib-sass": "^0.7.4"
+  }
+}

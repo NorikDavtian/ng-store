@@ -1,0 +1,113 @@
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <h1>Products</h1>
+        <!--<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add New Product</button>-->
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pull-right search">
+        <div class="input-group">
+            <input class="form-control" placeholder="Search Products" type="text" autocomplete="off" ng-model="query">
+            <div class="input-group-btn">
+                <button class="btn btn-default" data-ember-action="1"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="narrow">Preview</th>
+                        <th class="narrow">
+                            <a href="" ng-click="predicate = 'sku';
+                                                reverse = !reverse">SKU#</a>
+                        </th>
+                        <th>Title</th>
+                        <th class="narrow">
+                            <a href="" ng-click="predicate = 'price';
+                                                reverse = !reverse">Price</a>
+                        </th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>On Sale</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="narrow">
+                            <a href="" class="thumbnail">
+                                <img src="data:image/gif;base64,R0lGODdhQABAAOMAAADCjv///1/YuH/gxr/v4h/JnJ/o1D/Rqt/38AAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAQABAAAAE9RDISau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqPyKQqwGxKmoEBZQClHAhMggAGZT6bBArWKTl0AwaYwEtZMwuSQnMbRwQIhcJYzZ64A3R/dABucIR9LW4Vf2EABnMTWI0ABwNSL4ptWQFPY4N2lzSZfkxUB2ZUgBNMgzOjEm5mBo9mql9bf5yYiIecAQh2AKyrqrl8uqScY2nDEqDJx4teblvNAJLQu8iwXnIBcNaphq8s5JkEjdbeeAWP2ytnX2TyfblMaS7xwlXE85RjWpQIHEiwoMGDCBMqXMiwocOHECNKnEixIsEIADs=" alt="Preview" />
+                            </a>
+                        </td>
+                        <td class="narrow">
+                            <input type="number" class="form-control" placeholder="SKU" ng-model="sku">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Title" ng-model="title">
+                        </td>
+                        <td class="narrow">
+                            <input type="number" step="any" class="form-control" placeholder="$" ng-model="price">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="http://"  ng-model="image">
+                        </td>
+                        <td>
+                            <textarea class="form-control" rows="2" placeholder="Description" ng-model="description"></textarea>
+                        </td>
+                        <td>
+                            <select class="form-control" ng-model="category" ng-options="category.name for category in categories">
+                                <option value="">-- Select --</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" ng-model="isOnSale" ng-options="isOnSale.option for isOnSale in sale">
+                            </select>
+                        </td>
+                        <td class="narrow">
+                            <a href="" class="glyphicon glyphicon-plus" ng-click="addProduct()"></a>
+                        </td>
+                    </tr>
+                    <!-- First line for add -->
+
+                    <tr ng-repeat="product in products| orderBy:predicate:reverse | filter:query">
+                        <td class="narrow">
+                            <a href="index.html#/products/{{product.sku}}" class="thumbnail">
+                                <img ng-src="{{product.image}}" alt="" />
+                            </a>
+                        </td>
+                        <td class="narrow">
+                            <input type="number" class="form-control" placeholder="SKU" ng-model="product.sku" ng-change="save(product)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Title" ng-model="product.title" ng-change="save(product)">
+                        </td>
+                        <td class="narrow">
+                            <input type="number" step="any" class="form-control" placeholder="$" ng-model="product.price" ng-change="save(product)">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="http://"  ng-model="product.image" ng-change="save(product)">
+                        </td>
+                        <td>
+                            <textarea class="form-control" rows="2" placeholder="Description" ng-model="product.description" ng-change="save(product)"></textarea>
+                        </td>
+                        <td>
+                            <select class="form-control" ng-model="product.category" ng-options="category.name as category.name for category in categories" ng-change="save(product)">
+                                <option value="">-- Select --</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" ng-model="product.isOnSale" ng-options="isOnSale.option as isOnSale.option for isOnSale in sale" ng-change="save(product)">
+                            </select>
+                        </td>
+                        <td class="narrow">
+                            <a href="" class="glyphicon glyphicon-trash" ng-click="remove(product)"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+#product{
+    margin-top: 60px;
+    h1{
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+    .price{
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+}
+.featured-image{
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    img{
+        width: 100%;
+        height: auto;
+        border: 1px solid #fff;
+    }
+}

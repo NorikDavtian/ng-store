@@ -1,0 +1,67 @@
+.table-responsive{
+    margin-top: 20px;
+}
+.table .form-control{
+    border: 0 none;
+    box-shadow: none;
+    min-width: 60px;
+}
+.table .form-control:focus {
+    outline: auto;
+}
+.thumbnail{
+    background-color: #f4f4f4;
+    padding: 0;
+    max-width: 48px;
+    max-height: 48px;
+    /*border-radius: 50%;*/
+    margin: 0;
+    overflow: hidden;
+}
+.thumbnail img{
+    min-width: 48px;
+    min-height: 48px;    
+}
+a.glyphicon-plus,
+a.glyphicon-trash{
+    position: relative;
+    color: #ccc;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+.glyphicon-trash:focus,
+.glyphicon-trash:hover{
+    background: #c00;
+    color: #fff;
+    text-decoration: none;
+}
+.glyphicon-plus:active,
+.glyphicon-trash:active{
+    margin-top: 1px;
+}
+a.glyphicon-plus{
+    background: #3bb896;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 2em;
+    color: #fff;
+}
+.glyphicon-plus:focus,
+.glyphicon-plus:hover{
+    text-decoration: none;
+    background: #0c9;
+}
+.table-hover>tbody>tr:first-child{
+    border-bottom: 2px solid #ddd;
+    background: #f1f1f1;
+}
+.table-normal>tbody>tr:first-child{
+    border-bottom: inherit;
+    background: inherit;
+}
+.table .narrow{
+    max-width: 55px;
+}

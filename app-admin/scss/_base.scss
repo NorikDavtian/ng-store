@@ -1,0 +1,61 @@
+html,
+body{
+    overflow-x: hidden;
+    height: 100%;
+}
+body{
+    overflow-y: scroll; /* prevents layout from shifting when searching datat */
+}
+#admin {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#admin.toggled {
+    padding-left: 200px;
+}
+#sidebar-wrapper {
+    z-index: 99;
+    position: fixed;
+    left: 200px;
+    width: 0;
+    height: 100%;
+    margin-left: -200px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#admin.toggled #sidebar-wrapper {
+    width: 200px;
+}
+#page-content-wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    padding: 45px 0 15px;
+    z-index: 120;
+}
+#menu-toggle{
+    position: absolute;
+    top: 12px;
+    left: 0;
+    margin-left: -8px;
+    z-index: 90;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#admin.toggled #menu-toggle{
+    margin-left: -26px;    
+}

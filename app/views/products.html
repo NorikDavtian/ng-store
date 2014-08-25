@@ -1,0 +1,14 @@
+<div id="products" class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">If snow had a flavor&hellip;</h1>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product" ng-repeat="product in products">
+        <a href="#/products/{{product.sku}}">
+            <img ng-src="{{product.image}}" alt="{{product.title}}" />
+            <span class="product-title-wrapper">
+                <em class="product-title">{{product.title}} <strong class="price">{{product.price| currency}}</strong></em>
+            </span>
+            <span class="sale"  ng-show="product.isOnSale == 'Yes'">Sale</span>
+        </a>
+    </div>
+</div>

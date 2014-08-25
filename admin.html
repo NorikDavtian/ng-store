@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngularFireCartAdmin">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>ng-store App</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this app -->
+        <link href="app-admin/admin.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="admin" class="toggled">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#/">
+                            ng-Store Admin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#/products"><span class="glyphicon glyphicon-barcode"></span> Products</a>
+                    </li>
+                    <li>
+                        <a href="#/categories"><span class="glyphicon glyphicon-tags"></span> Categories</a>
+                    </li>
+                    <li>
+                        <a href="#/orders"><span class="glyphicon glyphicon-star"></span> Orders</a>
+                    </li>
+                    <li>
+                        <a href="#/customers"><span class="glyphicon glyphicon-user"></span> Customers</a>
+                    </li>
+                    <li>
+                        <a href="#/settings"><span class="glyphicon glyphicon-wrench"></span> Settings</a>
+                    </li>
+                    <li>
+                        <a href="/"><span class="glyphicon glyphicon-arrow-left"></span> Log Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <a id="menu-toggle" href="#menu-toggle" class="glyphicon glyphicon-transfer"></a>
+                <div class="container-fluid" ng-view></div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- Usually these JavaScript files also get uglified for production
+        ==================================================================== -->
+        <script src="libs/jquery/dist/jquery.min.js"></script>
+        <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="libs/angular/angular.js"></script>
+        <script src="libs/angular-resource/angular-resource.js"></script>
+        <script src="libs/angular-route/angular-route.js"></script>
+        <script src="libs/firebase/firebase.js"></script>
+        <script src="libs/angularfire/dist/angularfire.js"></script>
+        <script src="app-admin/admin.min.js"></script>
+    </body>
+</html>

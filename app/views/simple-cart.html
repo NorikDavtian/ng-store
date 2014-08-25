@@ -1,0 +1,33 @@
+<a href="#/cart" id="cart-link"><span class="badge">{{itemsCount}}</span><Span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+<div id="cart-content">
+    <p class="cart-empty" ng-hide="itemsCount"></p>
+    <div ng-show="itemsCount">
+        <div class="simple-cart-header">
+            <h4 class="pull-left">{{itemsCount}} item{{itemsCount > 1 && 's'|| ''}}, {{subTotal| currency}}</h4>
+            <a class="pull-right" href="#/cart">View/Edit Cart</a>
+        </div>
+        <div class="simple-cart-body">
+            <table class="cart-items table">
+                <tbody>
+                    <tr class="simple-cart-item" ng-repeat="item in items">
+                        <td>
+                            <a href="#/products/{{item.sku}}">
+                                <img ng-src="{{item.image}}">
+                            </a>
+                        </td>
+                        <td class="details">
+                            <h4>{{item.title}} <span class="price">{{item.price| currency}}</span></h4>
+                            <p>qty: <span>{{item.quantity}}</span></p>
+                        </td>
+                        <td>
+                            <a class="remove" href="" ng-click="remove(item)" rel="nofollow">&times;</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="simple-cart-footer">
+            <a class="btn btn-primary btn-checkout col-sm-12" href="#/checkout">Checkout</a>
+        </div>
+    </div>
+</div>

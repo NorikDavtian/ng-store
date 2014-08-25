@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Order <small>{{order.$id}}</small></h1>
+    </div>
+</div>
+<div class="row well well-lg">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-hover table-normal">
+                <thead>
+                    <tr>
+                        <th>Order Date</th>
+                        <th>Customer</th>
+                        <th>Sub Total</th>
+                        <th>Tax</th>
+                        <th>Shipping</th>
+                        <th>Grand Total</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            {{order.orderDate| date:'medium'}}
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Customer" ng-model="order.customer" ng-change="save()">
+                            <a href="#/customers/{{order.customer}}" class="help-block"><small class="glyphicon glyphicon-link"></small> View Customer Details</a>
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" placeholder="Sub Total" ng-model="order.subTotal" ng-change="save()">
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" placeholder="Tax" ng-model="order.tax" ng-change="save()">
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" placeholder="Shipping" ng-model="order.shipping" ng-change="save()">
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" placeholder="Grand Total" ng-model="order.grandTotal" ng-change="save()">
+                        </td>
+                        <td>
+                            <select class="form-control" ng-model="order.status" ng-options="status.option as status.option for status in statuses" ng-change="save()">
+                                <option value="">-- Select --</option>
+                            </select>
+                        </td>
+                        <td class="narrow">
+                            <a href="" class="glyphicon glyphicon-trash" ng-click="destroy()"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<h2>Items</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-hover table-normal">
+                <thead>
+                    <tr>
+                        <th class="narrow">Preview</th>
+                        <th class="narrow">
+                            <a href="" ng-click="predicate = 'sku';
+                                        reverse = !reverse">SKU#</a>
+                        </th>
+                        <th>Title</th>
+                        <th class="narrow">Quantity</th>
+                        <th class="narrow">
+                            <a href="" ng-click="predicate = 'price';
+                                        reverse = !reverse">Price</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in items| orderBy:predicate:reverse">
+                        <td class="narrow">
+                            <a href="index.html#/products/{{product.sku}}" class="thumbnail">
+                                <img ng-src="{{product.image}}" alt="" />
+                            </a>
+                        </td>
+                        <td class="narrow">
+                            {{product.sku}}
+                        </td>
+                        <td>
+                            {{product.title}}
+                        </td>
+                        <td class="narrow">
+                            {{product.quantity}}
+                        </td>
+                        <td class="narrow">
+                            {{product.price| currency}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
