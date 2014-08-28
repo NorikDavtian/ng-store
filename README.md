@@ -12,6 +12,7 @@ A simple store CRUD application demo with Angular and Firebase.
 Installation
 -------------------------------------------------------------------
 In order to get your local copy working follow these few steps.
+
 1. Signup for Firebase, and add a new app from your dashboard: https://www.firebase.com/account/
  1. (Optional) Setup Free hosting provided by Firebase https://ng-demo.firebaseio.com/?page=Hosting and follow the instructions, or use your own hosting. You don't need this if you are running a local server but would be nice to use this as our staging server.
  2. Go to your newly created app url and Import `app-content/ng-store-export.json` file for our demo configurations.
