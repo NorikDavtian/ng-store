@@ -18,7 +18,7 @@ AngularFireCart.controller("CheckoutCtrl", [
         // basic currency formatter
         var format$ = function(input) {
             return parseFloat(parseInt(input * 100) / 100);
-        }
+        };
 
         // instead of showing 404 on thank you page just show empty cart here
         // Also if user is not checked out, return them back to the checkout.
@@ -30,7 +30,8 @@ AngularFireCart.controller("CheckoutCtrl", [
             if ($scope.orderFrom.$valid) {
                 // Timestamp before adding the customer
                 $scope.customer.customerSince = Firebase.ServerValue.TIMESTAMP;
-                // Add
+                
+                // Add customer to our database
                 $scope.customers.$add($scope.customer).then(function(ref) {
                     $scope.orders.$add({
                         customer: ref.name(),
@@ -58,27 +59,34 @@ AngularFireCart.controller("CheckoutCtrl", [
                 $scope.error = "We need some valid shipping information";
             }
         };
+        
+        // Make a random number
+        function random(multiplier){            
+            return Math.floor((Math.random() * multiplier) + 1);
+        }
 
+        // Helper function to generate some prefilled values for testing
         $scope.prefillValid = function() {
             $scope.customer = {
-                name: "Norik Davtian " + Math.floor((Math.random() * 100) + 1),
-                email: "norik" + Math.floor((Math.random() * 100) + 1) + "@bigemployee.com",
-                address: Math.floor((Math.random() * 150) + 1) + " Main Street",
-                unit: "" + Math.floor((Math.random() * 10) + 1),
+                name: "Norik Davtian " + random(100),
+                email: "norik" + random(100) + "@bigemployee.com",
+                address: random(150) + " Main Street",
+                unit: "" + random(10),
                 city: "Los Angeles",
                 state: "CA",
-                zip: "90" + Math.floor((Math.random() * 1000) + 1),
+                zip: "90" + random(1000),
                 payment: {
                     name: "Norik",
                     last: "Davtian",
-                    ccNo: "42" + Math.floor((Math.random() * 100000) + 1) + "42" + Math.floor((Math.random() * 100000) + 1),
+                    ccNo: "42" + random(100000) + "42" + random(100000),
                     ccExpMonth: "9",
                     ccExpYear: "2016",
-                    ccCCV: "" + Math.floor((Math.random() * 1000) + 1)
+                    ccCCV: "" + random(1000)
                 }
             };
         };
 
+        // Helper function to generate some invalid form data
         $scope.prefillInvalid = function() {
             $scope.customer = {
                 name: "John Doe",
