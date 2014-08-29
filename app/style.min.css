@@ -305,6 +305,9 @@ img {
   padding: 13px 15px 15px 5px;
   line-height: 20px;
 }
+#simple-cart .btn {
+  width: 100%;
+}
 
 div[class^="simple-cart-"] {
   float: left;
@@ -341,7 +344,7 @@ div[class^="simple-cart-"] {
   padding: 10px;
   background: #fff;
   outline: 1px solid #222;
-  margin-top: 1px;
+  margin: 1px 0 0 0;
   z-index: 99;
   font-size: 0.75em;
 }
