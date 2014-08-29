@@ -622,6 +622,8 @@ footer .glyphicon-lock {
   background: #fcfcfc;
   border: 3px double #eee;
   padding: 50px 15px;
+  -ms-word-wrap: break-word;
+  word-break: break-word;  
 }
 
 /* Animations */
