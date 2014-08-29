@@ -10,6 +10,42 @@
         font-weight: 300;
     }
 }
+.add2cart{
+    overflow: hidden;
+    position: relative;
+    line-height: 48px;
+    height: 48px;
+    padding-top: 0;
+    padding-bottom: 0;
+    span{
+        display: block;
+        height: 48px;
+        @include transition(all 0.3s ease-out);
+    }
+    span:first-child{
+        .glyphicon{
+            margin-left: 5px;
+        }
+    }
+    span:last-child{
+        opacity: 0;
+        .glyphicon{
+            margin-right: 5px;
+        }
+    }
+}
+.add2cart.success{
+    color: #fff;
+    background-color: #42ca7e;
+    border-color: #00cc5a;
+    span:first-child{
+        margin-top: -48px;
+        opacity: 0;
+    }
+    span:last-child{
+        opacity: 1;
+    }
+}
 .featured-image{
     position: relative;
     margin-bottom: 20px;

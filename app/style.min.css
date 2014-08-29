@@ -242,6 +242,45 @@ header {
   font-weight: 300;
 }
 
+.add2cart {
+  overflow: hidden;
+  position: relative;
+  line-height: 48px;
+  height: 48px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.add2cart span {
+  display: block;
+  height: 48px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.add2cart span:first-child .glyphicon {
+  margin-left: 5px;
+}
+.add2cart span:last-child {
+  opacity: 0;
+}
+.add2cart span:last-child .glyphicon {
+  margin-right: 5px;
+}
+
+.add2cart.success {
+  color: #fff;
+  background-color: #42ca7e;
+  border-color: #00cc5a;
+}
+.add2cart.success span:first-child {
+  margin-top: -48px;
+  opacity: 0;
+}
+.add2cart.success span:last-child {
+  opacity: 1;
+}
+
 .featured-image {
   position: relative;
   margin-bottom: 20px;

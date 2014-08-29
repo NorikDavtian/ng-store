@@ -11,6 +11,9 @@
         <hr>
         <p class="text-left">{{product.description}}</p>
         <hr>
-        <a href="" class="btn btn-primary btn-lg" ng-click="add(product, 1)">Add to Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+        <a href="" class="btn btn-primary btn-lg add2cart" ng-class="{'success' : added}" ng-click="add(product, $event)">
+            <span>Add to Cart <i class="glyphicon glyphicon-shopping-cart"></i></span>
+            <span><i class="glyphicon glyphicon-thumbs-up"></i> Added</span>
+        </a>
     </div>
 </div>

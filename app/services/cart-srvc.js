@@ -31,28 +31,31 @@ angularCart.factory("cart", [
         // $add: addItem
         // Adds an item to the cart
         var addItem = function(product, quantity) {
-//            console.log("sku, title, price, quantity");
-//            console.log(product.sku, product.title, product.image, product.price, quantity);
             var newItem = new cartItem(product.sku, product.title, product.image, product.price, quantity);
             var item = checkCart(that.items, {sku: product.sku});
             var isInCart = item.length;
+            var added = false;
             if (isInCart) {
                 var newQuantity = item[0].quantity + quantity;
                 // Avoid going below 1 for item count in the cart
                 if (newQuantity) {
                     item[0].quantity = newQuantity;
-                    updateCart(quantity, product.price);
+                    added = updateCart(quantity, product.price);
                 }
             } else {
                 that.items.push(newItem);
-                updateCart(quantity, product.price);
+                added = updateCart(quantity, product.price);
             }
+            return added;
         };
 
         var updateCart = function(quantity, price) {
             setItemsCount(that.itemsCount + quantity);
             setSubTotal(that.subTotal + (quantity * price));
             localStorageService.set("cart", that.items);
+            // Since our Local Storage setter does not return a promise or
+            // anything, let's just fake it till we make it. #optimisticActions
+            return true;
         };
 
         // $items: getItems
