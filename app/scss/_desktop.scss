@@ -1,4 +1,13 @@
 @media (min-width: 768px) {
+    #logo{
+        margin-left: 0;
+    }
+    #simple-cart{
+        margin-right: 0;
+    }
+    .navbar-header{
+        padding: 0 15px;
+    }
     #cart-dropdown{
         display: block;
     }

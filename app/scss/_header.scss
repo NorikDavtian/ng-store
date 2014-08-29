@@ -1,13 +1,15 @@
-header{
-    float: left;
-    width: 100%;
-    background: #fff;
-    @include box-shadow(0 0 4px rgba(0,0,0,0.1));
-    padding: 10px;
+.navbar-header{
+    float: none;
+    margin: 0 auto;
 }
 #logo{
     text-decoration: none;
     color: #fff;
     font-weight: 200;
     font-size: 1.5em;
+    margin-left: -15px;
+    padding-top: 11px; // Adjust for baseline with the menu
+}
+.navbar-toggle{
+    float: left;
 }

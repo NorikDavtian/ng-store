@@ -23,41 +23,37 @@
 
     <body>
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
+        <header class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container navbar-header">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+                    <a id="logo" class="navbar-brand" href="#">ng-<b>Store</b></a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a id="logo" class="navbar-brand" href="#">ng-<b>Store</b></a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="nav navbar-nav" ng-controller="CategoriesCtrl">
-                        <li>
-                            <a href="#/">All Products</a>
-                        </li>
-                        <li ng-repeat="category in categories">
-                            <a href="#/categories/{{category.slug}}">{{category.title}}</a>
-                        </li>
-                        <li>
-                            <a href="#/sale"><Span class="glyphicon glyphicon-tag btn-xs"></span> Sale</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li id="simple-cart" data-simple-cart="simple-cart" ng-controller="CartCtrl">
-                            <!-- Simple Cart Directive  -->
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+                    <div id="simple-cart" data-simple-cart="simple-cart" ng-controller="CartCtrl">
+                        <!-- Simple Cart Directive  -->
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <nav class="collapse navbar-collapse" id="menu" role="navigation">
+                        <ul class="nav navbar-nav" ng-controller="CategoriesCtrl">
+                            <li>
+                                <a href="#/">All Products</a>
+                            </li>
+                            <li ng-repeat="category in categories">
+                                <a href="#/categories/{{category.slug}}">{{category.title}}</a>
+                            </li>
+                            <li>
+                                <a href="#/sale"><Span class="glyphicon glyphicon-tag btn-xs"></span> Sale</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /.navbar-collapse -->
             </div>
             <!-- /.container -->
-        </nav>
+        </header>
 
         <!-- Page Content -->
         <div class="container" ng-view>

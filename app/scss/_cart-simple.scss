@@ -1,5 +1,9 @@
 #simple-cart{
     position: relative;
+    float: right;
+    margin-right: -15px;
+    padding: 13px 15px 15px 5px;
+    line-height: 20px;
 }
 div[class^="simple-cart-"]{
     float: left;
@@ -7,6 +11,11 @@ div[class^="simple-cart-"]{
 }
 #cart-link{
     position: relative;
+    color: #777;
+    text-decoration: none;
+    b{
+        display: none;
+    }
     .badge{
         position: relative;
         top: -12px;
@@ -28,7 +37,8 @@ div[class^="simple-cart-"]{
     width: 320px;
     padding: 10px;
     background: #fff;
-    border: 1px solid #222;
+    outline: 1px solid #222;
+    margin-top: 1px;
     z-index: 99;
     font-size: 0.75em;
     h4{

@@ -91,14 +91,9 @@ img {
  * 3 - Header
  * -----------------------------------------------------------------------------
  */
-header {
-  float: left;
-  width: 100%;
-  background: #fff;
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+.navbar-header {
+  float: none;
+  margin: 0 auto;
 }
 
 #logo {
@@ -106,6 +101,12 @@ header {
   color: #fff;
   font-weight: 200;
   font-size: 1.5em;
+  margin-left: -15px;
+  padding-top: 11px;
+}
+
+.navbar-toggle {
+  float: left;
 }
 
 /**
@@ -299,6 +300,10 @@ header {
  */
 #simple-cart {
   position: relative;
+  float: right;
+  margin-right: -15px;
+  padding: 13px 15px 15px 5px;
+  line-height: 20px;
 }
 
 div[class^="simple-cart-"] {
@@ -308,6 +313,11 @@ div[class^="simple-cart-"] {
 
 #cart-link {
   position: relative;
+  color: #777;
+  text-decoration: none;
+}
+#cart-link b {
+  display: none;
 }
 #cart-link .badge {
   position: relative;
@@ -330,7 +340,8 @@ div[class^="simple-cart-"] {
   width: 320px;
   padding: 10px;
   background: #fff;
-  border: 1px solid #222;
+  outline: 1px solid #222;
+  margin-top: 1px;
   z-index: 99;
   font-size: 0.75em;
 }
@@ -676,8 +687,26 @@ footer .glyphicon-lock {
  * -----------------------------------------------------------------------------
  */
 /* Tablet */
+@media (min-width: 640px) {
+  #cart-link b {
+    display: inline;
+    font-weight: normal;
+  }
+}
 /* Desktop */
 @media (min-width: 768px) {
+  #logo {
+    margin-left: 0;
+  }
+
+  #simple-cart {
+    margin-right: 0;
+  }
+
+  .navbar-header {
+    padding: 0 15px;
+  }
+
   #cart-dropdown {
     display: block;
   }
