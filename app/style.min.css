@@ -231,7 +231,7 @@ img {
 }
 
 #product {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 #product h1 {
   font-weight: 700;
@@ -704,7 +704,7 @@ footer .glyphicon-lock {
   }
 
   .navbar-header {
-    padding: 0 15px;
+    padding: 0;
   }
 
   #cart-dropdown {
