@@ -1,16 +1,13 @@
 AngularFireCartAdmin.controller("ProductsCtrl", [
     "$scope",
     "products",
-    function($scope, products) {
+    "categories",
+    function($scope, products, categories) {
         // Data from Firebase
         $scope.products = products.$asArray();
         $scope.predicate = '-sku';
-
-        // @todo categories dynamically from DB
-        $scope.categories = [
-            {name: "Berries"},
-            {name: "Cake Pops"}
-        ];
+        
+        $scope.categories = categories.$asArray();
         $scope.sale = [
             {option: "Yes"},
             {option: "No"}
@@ -28,7 +25,7 @@ AngularFireCartAdmin.controller("ProductsCtrl", [
                     price: $scope.price,
                     image: $scope.image,
                     description: $scope.description,
-                    category: $scope.category.name,
+                    category: $scope.category.title,
                     isOnSale: $scope.isOnSale.option
                 });
                 //RESET Form

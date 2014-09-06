@@ -58,7 +58,7 @@
                             <textarea class="form-control" rows="2" placeholder="Description" ng-model="description"></textarea>
                         </td>
                         <td>
-                            <select class="form-control" ng-model="category" ng-options="category.name for category in categories">
+                            <select class="form-control" ng-model="category" ng-options="category.title for category in categories">
                                 <option value="">-- Select --</option>
                             </select>
                         </td>
@@ -94,7 +94,7 @@
                             <textarea class="form-control" rows="2" placeholder="Description" ng-model="product.description" ng-change="save(product)"></textarea>
                         </td>
                         <td>
-                            <select class="form-control" ng-model="product.category" ng-options="category.name as category.name for category in categories" ng-change="save(product)">
+                            <select class="form-control" ng-model="product.category" ng-options="category.title as category.title for category in categories" ng-change="save(product)">
                                 <option value="">-- Select --</option>
                             </select>
                         </td>
