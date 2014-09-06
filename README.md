@@ -17,7 +17,7 @@ In order to get your local copy working follow these few steps.
  1. (Optional) Setup Free hosting provided by Firebase https://ng-demo.firebaseio.com/?page=Hosting and follow the instructions, or use your own hosting. You don't need this if you are running a local server but would be nice to use this as our staging server.
  2. Go to your newly created app url and Import `app-content/ng-store-export.json` file for our demo configurations.
 3. change the `.value('fbURL', 'https://ng-store.firebaseio.com/');` in `app/main.js` and `app-admin/main.js` to your newly created firebase app URL.
-4. Install Node modules by running `$ npm install`.. (Optional: add `-g` at the end if you want to save these modules globally)
+4. Install Node modules by running `$ npm install`.. (*Note:* Install Grunt CLI, SASS and Compass if you have not already)
 5. Run Grunt tasks `$ grunt`
 
 License
